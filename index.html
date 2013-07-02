@@ -36,10 +36,11 @@
 			<!-- Progress Bar -->
 			<section class="">
 				<div class="muted">
-					<strong>Total Progress</strong> <small>- 24 of 30 needs filled.</small>
+					<strong>Total Progress</strong> <small>- <span class="total_pledged">24</span> of <span class="total_need">30</span> needs filled.</small>
 				</div>
 				<div class="progress">
-					<div class="bar" style="width: 80%;"></div>
+					<div id="master_pledged" class="bar" style="width: 0;"></div>
+					<div id="master_userpledge" class="bar bar-success" style="width:0;"></div>
 				</div>
 			</section>
 			<br>
@@ -59,9 +60,9 @@
 								</div>
 							</td>
 							<td style="width:33%">
-								<div class="text-center"><small class="muted"><span class="row_pledge">6</span> of <span class="row_total">10</span> needed</small></div>
+								<div class="text-center"><small class="muted"><span class="row_pledge">0</span> of <span class="row_total">0</span> needed</small></div>
 								<div class="progress">
-									<div class="bar pledged_progress" style="width: 60%"></div>
+									<div class="bar pledged_progress" style="width: 0"></div>
 									<div class="bar bar-success user_progress" style="width:0"></div>
 								</div>
 							</td>
@@ -80,9 +81,9 @@
 								</div>
 							</td>
 							<td>
-								<div class="text-center"><small class="muted"><span class="row_pledge">3</span> of <span class="row_total">10</span> needed</small></div>
+								<div class="text-center"><small class="muted"><span class="row_pledge">0</span> of <span class="row_total">0</span> needed</small></div>
 								<div class="progress">
-									<div class="bar pledged_progress" style="width: 30%"></div>
+									<div class="bar pledged_progress" style="width: 0"></div>
 									<div class="bar bar-success user_progress" style="width:0"></div>
 								</div>
 							</td>
@@ -101,10 +102,10 @@
 								</div>
 							</td>
 							<td>
-								<div class="text-center"><small class="muted"><span class="row_pledge">1</span> of <span class="row_total">10</span> needed</small></div>
+								<div class="text-center"><small class="muted"><span class="row_pledge">0</span> of <span class="row_total">0</span> needed</small></div>
 
 								<div class="progress">
-									<div class="bar pledged_progress" style="width: 10%"></div>
+									<div class="bar pledged_progress" style="width: 0"></div>
 									<div class="bar bar-success user_progress" style="width:0"></div>
 								</div>
 							</td>
@@ -119,6 +120,9 @@
 					</tbody>
 				</table>
 			</section>
+			<!-- <div class="text-center">
+					<button id="resetform" type="button" class="btn"><i class="icon-remove"></i> Clear choices</button>
+			</div> -->
 			<br>
 
 			<section>

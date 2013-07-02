@@ -23,9 +23,34 @@ $(function() {
 		return parseInt(val, 10);
 	}
 
-	var $row = $('#pledge-form tr');
+	var $rows = $('#pledge-form tr');
 
-	$row.each(function(index) {
+	// set master progress on change and on load
+	var	totaluserpledge = 0,
+		totalpledged = 0,
+		totalneed = 0;
+	$rows.on('change', function(event) {
+		totaluserpledge = 0;
+		totalpledged = 0;
+		totalneed = 0;
+		$rows.each(function(index) {
+			totaluserpledge = totaluserpledge + pi($(this).attr('data-userpledge'));
+			totalpledged = totalpledged + pi($(this).attr('data-pledged'));
+			totalneed = totalneed + pi($(this).attr('data-need'));
+		});
+		$('#master_pledged').width((totalpledged/totalneed)*100+'%');
+		$('#master_userpledge').width((totaluserpledge/totalneed)*100+'%');
+		if (totaluserpledge!=0) {
+			$('#master_userpledge').text(totaluserpledge);
+		} else {
+			$('#master_userpledge').text('');
+		};
+		$('.total_pledged').text(totalpledged+totaluserpledge);
+		$('.total_need').text(totalneed);
+	}).trigger('change');
+
+
+	$rows.each(function(index) {
 		
 		// elements
 		var $this = $(this),
@@ -51,15 +76,16 @@ $(function() {
 			$input.val(userpledge);
 		}
 
-		function updateProgress(userpledge, need) {
-			var percentage = (userpledge/need)*100;
-			$userProg.css('width', percentage+'%');
+		function updateProgress(userpledge, pledged, need) {
+			$pledgedProg.width((pledged/need)*100+'%');
+			$userProg.width((userpledge/need)*100+'%');
 			if (userpledge != 0) {
 				$userProg.text(userpledge);
 			} else {
 				$userProg.text('');
 			};
-			$rowPledge.text(vals.pledged+userpledge);
+			$rowPledge.text(pledged+userpledge);
+			$rowTotal.text(need);
 		}
 
 		function updateButtons(userpledge) {
@@ -77,18 +103,18 @@ $(function() {
 
 		$this.on('change', function(event) {
 			var newVals = getVals($this);
-			console.log('change', newVals);
+			// console.log('change', newVals);
 			updateInput(newVals.userpledge);
-			updateProgress(newVals.userpledge, newVals.need);
+			updateProgress(newVals.userpledge, newVals.pledged, newVals.need);
 			updateButtons(newVals.userpledge);
 			vals = newVals;
-		});
+		}).trigger('change');
 
 		$buttonPlus.on('click', function(event) {
 			event.preventDefault();
 			if (vals.userpledge == max) return false;
 			updatePledge(+1);
-			console.log(vals.userpledge);
+			// console.log(vals.userpledge);
 		});
 
 		$buttonMinus.on('click', function(event) {
@@ -98,6 +124,10 @@ $(function() {
 		});
 
 	});
+
+
+
+	// $('#clearform').
 
 
 	// var $row = $('#pledge-form tr');
