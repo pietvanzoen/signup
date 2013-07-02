@@ -98,6 +98,9 @@ input[type=email] {
   bottom: 20px;
   right: 20px;
 }
+.progress {
+  line-height: 20px;
+}
 /* ==============
 MOBILE: 
 ============== */

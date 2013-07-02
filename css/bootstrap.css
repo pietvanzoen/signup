@@ -2127,7 +2127,7 @@ legend + .control-group {
 }
 .btn-large [class^="icon-"],
 .btn-large [class*=" icon-"] {
-  margin-top: 4px;
+  margin-top: 6px;
 }
 .btn-small {
   padding: 2px 10px;
@@ -2138,7 +2138,7 @@ legend + .control-group {
 }
 .btn-small [class^="icon-"],
 .btn-small [class*=" icon-"] {
-  margin-top: 0;
+  margin-top: 2px;
 }
 .btn-mini [class^="icon-"],
 .btn-mini [class*=" icon-"] {
@@ -2432,7 +2432,7 @@ input[type="submit"].btn.btn-mini {
   background-image: url("../img/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
-  margin-top: 1px;
+  margin-top: 3px;
 }
 /* White icons with optional class, or on hover/focus/active states of certain elements */
 .icon-white,
