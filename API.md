@@ -20,12 +20,12 @@ Create a schedule
 Response:
 
 201 Created
-Location: http://.../api/schedules/**<ID>**
+Location: http://.../api/schedules/ **ID**
 
 Remove a schedule
 -----------------
 
-**DELETE /api/schedules/<ID>**
+**DELETE /api/schedules/ID**
 
 Response:
 
@@ -35,7 +35,7 @@ Response:
 Signing up for dates
 --------------------
 
-**POST /api/schedules/<ID>**
+**POST /api/schedules/ID**
 
 To signup:
 
@@ -57,7 +57,7 @@ Response:
 Changing a schedule
 -------------------
 
-**PUT /api/schedules/<ID>**
+**PUT /api/schedules/ID**
 
 Overwrites a schedule entirely. Same payload as POST.
 
@@ -90,13 +90,13 @@ Create an event
 Response:
 
 201 Created
-Location: http://.../api/events/**<ID>**
+Location: http://.../api/events/ **ID**
 
 
 Remove an event
 ---------------
 
-**DELETE /api/events/<ID>**
+**DELETE /api/events/ID**
 
 Response:
 
@@ -106,7 +106,7 @@ Response:
 Signing up for items
 --------------------
 
-**POST /api/events/<ID>**
+**POST /api/events/ID**
 
 To signup:
 
@@ -128,7 +128,7 @@ Response:
 Changing an event
 -----------------
 
-**PUT /api/events/<ID>**
+**PUT /api/events/ID**
 
 Overwrites an event entirely. Same payload as POST.
 
