@@ -52,65 +52,67 @@
 				<!-- <h3>New Section Header</h3> -->
 				<table class="table table-striped">
 					<tbody>
-						<tr data-total="10" data-pledged="6">
-							<td>
+						<tr id="uniqueId1" data-need="10" data-pledged="6" data-userpledge="0">
+							<td style="width:35%">
 								<div>
 									Bread <br><small class="muted">Small description</small>
 								</div>
 							</td>
-							<td>
-								<div class="text-center"><small class="muted"><span class="row_pledged">6</span> of <span class="row_total">10</span></small></div>
+							<td style="width:33%">
+								<div class="text-center"><small class="muted"><span class="row_pledge">6</span> of <span class="row_total">10</span> needed</small></div>
 								<div class="progress">
-									<div class="bar" style="width: 60%"></div>
-									<div class="bar bar-success" style="width:0"></div>
+									<div class="bar pledged_progress" style="width: 60%"></div>
+									<div class="bar bar-success user_progress" style="width:0"></div>
 								</div>
 							</td>
-							<td>
+							<td style="width:32%">
 								<div class="text-center">
-									<input type="number" min="0" max="4" value="0" name="cheese" class="pledge_number">
-									<button class="pledge_subtract btn disabled">-</button>
-									<button class="pledge_add btn">+</button>
+									<input class="pledge_input" type="hidden" value="0" name="uniqueId1">
+									<button class="pledge_minus btn disabled">-</button>
+									<button class="pledge_plus btn">+</button>
 								</div>
 							</td>
 						</tr>
-						<tr data-total="10" data-pledged="3">
+						<tr id="uniqueId2" data-need="10" data-pledged="3" data-userpledge="0">
 							<td>
 								<div>
 									Cheese <br><small class="muted">Small description</small>
 								</div>
 							</td>
 							<td>
-								<div class="text-center"><small class="muted"><span class="row_pledged">3</span> of <span class="row_total">10</span></small></div>
+								<div class="text-center"><small class="muted"><span class="row_pledge">3</span> of <span class="row_total">10</span> needed</small></div>
 								<div class="progress">
-									<div class="bar" style="width: 30%"></div>
-									<div class="bar bar-success" style="width:0"></div>
+									<div class="bar pledged_progress" style="width: 30%"></div>
+									<div class="bar bar-success user_progress" style="width:0"></div>
 								</div>
 							</td>
 							<td>
 								<div class="text-center">
-									<button class="btn disabled">-</button>
-									<button class="btn">+</button>
+									<button class="pledge_minus btn disabled">-</button>
+									<button class="pledge_plus btn">+</button>
+									<input class="pledge_input" type="hidden" value="0" name="uniqueId2">
 								</div>
 							</td>
 						</tr>
-						<tr data-total="10" data-pledged="1">
+						<tr id="uniqueId3" data-need="10" data-pledged="1" data-userpledge="0">
 							<td>
 								<div>
 									Donuts <br><small class="muted">Small description</small>
 								</div>
 							</td>
 							<td>
-								<div class="text-center"><small class="muted"><span class="row_pledged">1</span> of <span class="row_total">10</span></small></div>
+								<div class="text-center"><small class="muted"><span class="row_pledge">1</span> of <span class="row_total">10</span> needed</small></div>
 
 								<div class="progress">
-									<div class="bar" style="width: 10%"></div>
-									<div class="bar bar-success" style="width:0"></div>
+									<div class="bar pledged_progress" style="width: 10%"></div>
+									<div class="bar bar-success user_progress" style="width:0"></div>
 								</div>
 							</td>
 							<td>
 								<div class="text-center">
-									<button class="btn disabled">-</button>
-									<button class="btn">+</button>
+									<button class="pledge_minus btn disabled">-</button>
+									<button class="pledge_plus btn">+</button>
+									<input class="pledge_input" type="hidden" value="0" name="uniqueId3">
 								</div>
 							</td>
 						</tr>
