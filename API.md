@@ -9,12 +9,13 @@ Create a schedule
 ```JSON
 {
     "name": "...",
-    "description": "..."
+    "description": "...",
     "dates": {
         "<date 1>": 5,
         "<date 2>": 9,
         "<date n>": 1
     }
+}
 ```
 
 Response:
@@ -69,16 +70,46 @@ Response:
 Events
 ======
 
+Retreive an event
+-----------------
+
+**GET /api/events**
+
+```JSON
+{
+    "name": "...",
+    "date": "...",
+    "description": "...",
+    "items": {
+        "<item name 1>": {
+            "description": "small description",
+            "pledged": 6,
+            "need" : 10
+        },
+        "<item name 2>": {
+            "description": "small description",
+            "pledged": 6,
+            "need" : 10
+            },
+        "<item name n>": {
+            "description": "small description",
+            "pledged": 6,
+            "need" : 10
+        }
+    }
+}
+
 Create an event
 ---------------
 
+```
 **POST /api/events**
 
 ```JSON
 {
     "name": "...",
     "date": "...",
-    "description": "..."
+    "description": "...",
     "items": {
         "<item name 1>": 5,
         "<item name 2>": 9,
