@@ -1,0 +1,22 @@
+{
+	"name": "Home PDX Signup - Sunday July 21st",
+	"date": "2013/07/21",
+	"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, suscipit, debitis voluptates voluptatum reiciendis repudiandae iusto adipisci molestias labore quaerat voluptatem dignissimos <a href=\"#\">officia praesentium</a> sunt minima ratione beatae alias delectus.",
+	"items": {
+		"Bread":  {
+			"description" : "small description",
+			"pledged": 6,
+			"need": 10
+		},
+		"Cheese": {
+			"description" : "small description",
+			"pledged": 3,
+			"need": 5
+		},
+		"Donuts": {
+			"description" : "small description",
+			"pledged": 2,
+			"need": 7
+		}
+	}
+}
