@@ -98,11 +98,11 @@ Retreive an event
         }
     }
 }
+```
 
 Create an event
 ---------------
 
-```
 **POST /api/events**
 
 ```JSON
