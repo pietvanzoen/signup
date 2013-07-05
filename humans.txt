@@ -1,6 +1,13 @@
 # humanstxt.org/
 # The humans responsible & technology colophon
 
+# PROJECT
+    SIGNUP
+    A helpful app for signing up volunteers for stuff.
+
+# REPO
+    https://github.com/pietvanzoen/signup
+
 # TEAM
 
     Micheal Schurter -- Backend Dev -- @schmichael
@@ -13,8 +20,9 @@
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    LESS (http://lesscss.org/), Kit (http://incident57.com/codekit/kit.php)
+    LESS (CSS Preprocessor - http://lesscss.org/), Kit (HTML file importing - http://incident57.com/codekit/kit.php)
     jQuery, Modernizr
     Django, Python
-    Sublime Text 2, Codekit
+    Sublime Text 2, Codekit, SourceTree
+    GitHub
 
