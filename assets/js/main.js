@@ -5,12 +5,6 @@ $(function() {
 	});
 
 
-	$.event.trigger({
-		type:    'pledgeUpdate',
-		message: 'pledge updated',
-		time:    new Date()
-	});
-
 	var getVals = function(row){
 		return {
 			need: pi(row.attr('data-need')),
@@ -47,6 +41,7 @@ $(function() {
 		};
 		$('.total_pledged').text(totalpledged+totaluserpledge);
 		$('.total_need').text(totalneed);
+		$('.total_userpledged').text(totaluserpledge);
 	}).trigger('change');
 
 
