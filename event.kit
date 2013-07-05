@@ -1,0 +1,118 @@
+<!-- @import header.kit -->
+<form id="pledge-form">
+
+<!-- Header -->
+<header class="masthead clearfix">
+	<h2>Home PDX Signup - Sunday July 21st</h2>
+	<p class="muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, suscipit, debitis voluptates voluptatum reiciendis repudiandae iusto adipisci molestias labore quaerat voluptatem dignissimos <a href="#">officia praesentium</a> sunt minima ratione beatae alias delectus.</p>
+</header>
+<br>
+
+<!-- Progress Bar -->
+<section class="">
+	<div class="muted">
+		<strong>Total Progress</strong> <small>- <span class="total_pledged">24</span> of <span class="total_need">30</span> needs filled.</small>
+	</div>
+	<div class="progress">
+		<div id="master_pledged" class="bar" style="width: 0;"></div>
+		<div id="master_userpledge" class="bar bar-success" style="width:0;"></div>
+	</div>
+</section>
+<br>
+<section>
+	
+</section>
+
+<!-- Signup Table -->
+<section>
+	<!-- <h3>New Section Header</h3> -->
+	<table class="table table-striped">
+		<tbody>
+			<tr id="uniqueId1" data-need="10" data-pledged="6" data-userpledge="0">
+				<td style="width:35%">
+					<div>
+						Bread <br><small class="muted">Small description</small>
+					</div>
+				</td>
+				<td style="width:33%">
+					<div class="text-center"><small class="muted"><span class="row_pledge">0</span> of <span class="row_total">0</span> needed</small></div>
+					<div class="progress">
+						<div class="bar pledged_progress" style="width: 0"></div>
+						<div class="bar bar-success user_progress" style="width:0"></div>
+					</div>
+				</td>
+				<td style="width:32%">
+					<div class="text-center">
+						<input class="pledge_input" type="hidden" value="0" name="uniqueId1">
+						<button class="pledge_minus btn disabled">-</button>
+						<button class="pledge_plus btn">+</button>
+					</div>
+				</td>
+			</tr>
+			<tr id="uniqueId2" data-need="10" data-pledged="3" data-userpledge="0">
+				<td>
+					<div>
+						Cheese <br><small class="muted">Small description</small>
+					</div>
+				</td>
+				<td>
+					<div class="text-center"><small class="muted"><span class="row_pledge">0</span> of <span class="row_total">0</span> needed</small></div>
+					<div class="progress">
+						<div class="bar pledged_progress" style="width: 0"></div>
+						<div class="bar bar-success user_progress" style="width:0"></div>
+					</div>
+				</td>
+				<td>
+					<div class="text-center">
+						<button class="pledge_minus btn disabled">-</button>
+						<button class="pledge_plus btn">+</button>
+						<input class="pledge_input" type="hidden" value="0" name="uniqueId2">
+					</div>
+				</td>
+			</tr>
+			<tr id="uniqueId3" data-need="10" data-pledged="1" data-userpledge="0">
+				<td>
+					<div>
+						Donuts <br><small class="muted">Small description</small>
+					</div>
+				</td>
+				<td>
+					<div class="text-center"><small class="muted"><span class="row_pledge">0</span> of <span class="row_total">0</span> needed</small></div>
+
+					<div class="progress">
+						<div class="bar pledged_progress" style="width: 0"></div>
+						<div class="bar bar-success user_progress" style="width:0"></div>
+					</div>
+				</td>
+				<td>
+					<div class="text-center">
+						<button class="pledge_minus btn disabled">-</button>
+						<button class="pledge_plus btn">+</button>
+						<input class="pledge_input" type="hidden" value="0" name="uniqueId3">
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+<!-- <div class="text-center">
+		<button id="resetform" type="button" class="btn"><i class="icon-remove"></i> Clear choices</button>
+</div> -->
+<br>
+
+<section>
+	<fieldset class="form-inline text-center">
+		<p class="muted">You've pledged to contribute to <span class="total_userpledged">0</span> needs.</p>
+		<input type="email" placeholder="Email address">
+		<button type="button" class="btn btn-success btn-large" data-loading-text="Thanks!...">Signup <i class="icon-thumbs-up icon-white"></i></button>
+	</fieldset>
+	<br>
+	<div class="text-center">
+		<p>Once you sign up you'll receive an email with details of everything you signed up for. You'll also receive a reminder 2 days before the event.</p>
+	</div>
+</section>
+	
+<br>
+</form>
+
+<!-- @import _footer.kit -->
