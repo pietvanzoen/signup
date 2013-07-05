@@ -3,13 +3,18 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Micheal Schurter -- Backend Dev -- @schmichael
+    Piet van Zoen -- Frontend Dev -- @pietvanzoen
 
 # THANKS
 
-    <name>
+    Evergreen Community - http://evergreenpdx.org
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
+    LESS (http://lesscss.org/), Kit (http://incident57.com/codekit/kit.php)
     jQuery, Modernizr
+    Django, Python
+    Sublime Text 2, Codekit
+
