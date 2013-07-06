@@ -1,3 +1,9 @@
+Basics
+======
+
+All dates are [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) formatted
+(with the "T"): ``2013-12-25T23:59:59Z``
+
 Schedules
 =========
 
