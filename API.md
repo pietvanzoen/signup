@@ -17,12 +17,22 @@ Create a schedule
     "name": "...",
     "description": "...",
     "dates": {
-        "<date 1>": 5,
-        "<date 2>": 9,
-        "<date n>": 1
+        "<date 1>": {
+            "description": "...",
+            "need": 5
+        },
+        "<date 2>": {
+            "description": "...",
+            "need": 9
+        },
+        "<date n>": {
+            "description": "...",
+            "need": 1
+        }
     }
 }
 ```
+
 
 Response:
 
@@ -49,7 +59,7 @@ To signup:
 ```JSON
 {
     "user": "...",
-    "items": [
+    "dates": [
         "<date 1>",
         "<date n>"
     ]
@@ -117,9 +127,18 @@ Create an event
     "date": "...",
     "description": "...",
     "items": {
-        "<item name 1>": 5,
-        "<item name 2>": 9,
-        "<item name n>": 1
+        "<item name 1>": {
+            "description": "eggs",
+            "need": 5
+        },
+        "<item name 2>": {,
+            "description": "spam",
+            "need": 9
+        },
+        "<item name n>": {
+            "description": "juice",
+            "need": 1
+        },
     }
 }
 ```
