@@ -15,10 +15,10 @@ class ApiBaseView(View):
         method = request.method.lower()
         if method in ('post', 'put'):
             # Pass incoming payloads to POST and PUT methods
-            response = getattr(method)(request.get_json())
+            response = getattr(self, method)(request.get_json())
         else:
             # Don't pass anything to GET and DELETE methods
-            response = getattr(method)()
+            response = getattr(self, method)()
 
         if isinstance(response, (dict, list)):
             # If the response looks like JSON (dict or list) - make it JSON
