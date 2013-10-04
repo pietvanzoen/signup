@@ -7,10 +7,12 @@ class Schedules(ApiBaseView):
     methods = ('GET', 'POST')
 
     def get(self):
-        schedules = [
-            {"description": s.description, "id": s.id}
-            for s in models.Schedule.get()
-        ]
+        schedules = {
+            "schedules": [
+                {"description": s.description, "id": s.id, "name": s.name}
+                for s in models.Schedule.get()
+            ],
+        }
         return schedules
 
     def post(self, payload):
