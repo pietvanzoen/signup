@@ -7,6 +7,19 @@ All dates are [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) formatted
 Schedules
 =========
 
+Listing schedules
+-----------------
+
+**GET /api/schedules**
+
+```JSON
+{
+    "schedules": [
+        ...list of schedule objects...
+    ]
+}
+```
+
 Create a schedule
 -----------------
 
