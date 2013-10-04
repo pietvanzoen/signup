@@ -29,20 +29,23 @@ Create a schedule
 {
     "name": "...",
     "description": "...",
-    "dates": {
-        "<date 1>": {
+    "dates": [
+        {
+            "date": "<date 1>"
             "description": "...",
             "need": 5
         },
-        "<date 2>": {
+        {
+            "date": "<date 2>"
             "description": "...",
             "need": 9
         },
-        "<date n>": {
+        {
+            "date": "<date n>"
             "description": "...",
             "need": 1
         }
-    }
+    ]
 }
 ```
 
