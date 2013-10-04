@@ -12,6 +12,11 @@ class Schedules(ApiBaseView):
 
     def post(self, payload):
         schedule = models.Schedule.put(**payload)
-        #FIXME uncomment once schedule view is implemented
-        #return '', 201, {'Location': self.url_for('schedule', schedule_id)}
-        return str(schedule.id), 201, {'Location': 'lolwat'}
+        return '', 201, {'Location': self.url_for('schedules/<int:id>', id=schedule.id)}
+
+
+class Schedule(ApiBaseView):
+    url = 'schedules/<int:id>'
+
+    def get(self, id):
+        return models.Schedule.get(id)
