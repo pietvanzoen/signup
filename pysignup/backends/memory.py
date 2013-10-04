@@ -22,8 +22,8 @@ class MemoryModelMixin(metaclass=MemoryStore):
 
     @classmethod
     def put(cls, *args, **kwargs):
-        id = len(cls._store) + 1
-        self = super().put(id, *args, **kwargs)
+        kwargs['id'] = len(cls._store) + 1
+        self = super().put(*args, **kwargs)
         cls._store[id] = self
         return self
 

@@ -33,17 +33,18 @@ class Schedule(BaseModel):
 
 
 class ScheduleDate(BaseModel):
-    def __init__(self, schedule, date=None, need=None, signups=()):
+    def __init__(self, id, schedule=None, date=None, need=None, signups=()):
         assert date, 'Date must be set'
         assert need, 'Need must be set'
+        self.id = id
         self.schedule = schedule
         self.date = date
         self.need = need
         self.signups = signups
 
     @classmethod
-    def put(cls, schedule, date=None, need=None, signups=()):
-        return cls(schedule, date, need, signups)
+    def put(cls, id, schedule=None, date=None, need=None, signups=()):
+        return cls(id, schedule, date, need, signups)
 
     def todict(self):
         """Return a JSON compatible dict representation"""
@@ -55,14 +56,15 @@ class ScheduleDate(BaseModel):
 
 
 class ScheduleSignup(BaseModel):
-    def __init__(self, schedule_date, user):
+    def __init__(self, id, schedule_date, user):
+        self.id = id
         self.schedule_date = schedule_date
         self.user = user
 
     @classmethod
-    def put(cls, schedule_date, user):
-        return cls(schedule_date, user)
+    def put(cls, id, schedule_date, user):
+        return cls(id, schedule_date, user)
 
     def todict(self):
         """Return a JSON compatible dict representation"""
-        return {"user": self.user}
+        return {"id": self.id, "user": self.user}
