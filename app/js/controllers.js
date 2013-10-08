@@ -6,7 +6,7 @@
 function scheduleCtrl($scope, $http, $rootScope) {
     $rootScope.title = 'Signup - Schedule';
     $scope.schedule = [];
-    $http.get('http://signup.dev/app/json/schedule.json').success(function(data) {
+    $http.get('json/schedule.json').success(function(data) {
         $scope.schedule = data;
     });
 
