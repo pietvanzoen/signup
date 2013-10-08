@@ -22,10 +22,12 @@ angular.module('signupApp.filters', []).
     }
   }).
 
-  filter('disabled', function() {
+  filter('btnState', function() {
     return function(input) {
     	if (input > 0) {
-    		return 'disabled';
-    	};
+    		return 'active btn-success';
+    	} else {
+        return 'btn-default';
+      };
     }
   });
