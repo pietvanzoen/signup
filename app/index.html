@@ -1,26 +1,44 @@
 <!doctype html>
 <html lang="en" ng-app="signupApp">
 <head>
-  <meta charset="utf-8">
-  <title ng-bind-template="{{title}}">Signup</title>
-  <link rel="stylesheet" href="css/bootstrap.css"/>
-  <link rel="stylesheet" href="css/main.css"/>
+	<meta charset="utf-8">
+	<title ng-bind-template="{{title}}">Signup</title>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/signup.css"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content = "width = device-width" />
 </head>
-<body>
-  <div class="container-narrow">
+<body ng-cloak>
+		<header class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="./" class="navbar-brand"><strong>Signupfor.it</strong></a>
+				</div>
+				<p class="navbar-text navbar-right">An app for signing up people for stuff.</p>
+			</div>
+		</header>
 
-    <div ng-view></div>
 
-    <!-- In production use:
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-    -->
-  </div>
-  <script src="lib/angular/angular.js"></script>
-  <script src="lib/angular/angular-sanitize.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
+		<div class="container" ng-view></div>
+
+
+	<footer class="su-footer">
+		<div class="container">
+			<p class="text-center text-muted"><small>By <a href="http://twitter.com/schmichael" target="_blank">@schmichael</a> and <a href="http://twitter.com/pietvanzoen" target="_blank">@pietvanzoen</a>.</small></p>
+		</div>
+	</footer>
+
+	<!-- In production use:
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	-->
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular/angular-sanitize.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/services.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/filters.js"></script>
+	<script src="js/directives.js"></script>
+
 </body>
 </html>
