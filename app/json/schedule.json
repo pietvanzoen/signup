@@ -1,0 +1,24 @@
+{
+	"name": "Kids Room Signup - Summer 2013",
+	"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, suscipit, debitis voluptates voluptatum reiciendis repudiandae iusto adipisci molestias labore quaerat voluptatem dignissimos <a href=\"#\">officia praesentium</a> sunt minima ratione beatae alias delectus.",
+	"dates": [
+		{
+			"date": "2013-09-16",
+			"description" : "Lorem ipsum dolor.",
+			"pledged": 5,
+			"need": 6
+		},
+		{
+			"date": "2013-10-23",
+			"description" : "Lorem ipsum dolor.",
+			"pledged": 3,
+			"need": 5
+		},
+		{
+			"date": "2013-11-11",
+			"description" : "Lorem ipsum dolor.",
+			"pledged": 2,
+			"need": 7
+		}
+	]
+}

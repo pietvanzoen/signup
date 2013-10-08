@@ -1,0 +1,61 @@
+
+
+<header class="masthead clearfix">
+	<h2 ng-bind="schedule.name"></h2>
+	<p ng-bind-html="schedule.description" class="text-muted"></p>
+</header>
+
+<section class="">
+	<div class="text-muted">
+		<strong>Total Progress</strong> <small>- {{total('pledged')+total('user')}} of {{total('need')}} needs filled.</small>
+	</div>
+	<div class="progress">
+		<div class="progress-bar" style="width: {{ total('pledged')/total('need') | percent }};"></div>
+		<div class="progress-bar progress-bar-success" style="width:{{ total('user')/total('need') | percent }};"></div>
+	</div>
+</section>
+<br>
+
+<section>
+	<table id="signupTable" class="table table-striped">
+		<tr ng-repeat="date in schedule.dates" ng-click="date.user = !date.user" class="{{ !date.user || 'success' }}">
+			<td style="width:35%">
+				<div>
+					<span>{{ date.date | date:'EEEE MMMM MM, yyyy' }}</span><br>
+					<small class="text-muted">{{ date.description }}</small>
+				</div>
+			</td>
+			<td style="width:33%">
+				<div class="text-center">
+					<small class="text-muted"><span class="row_pledge">{{ date.pledged }}</span> of <span class="row_total">{{ date.need }}</span> needed</small>
+				</div>
+				<div class="progress">
+					<div class="progress-bar pledged_progress" style="width: {{ date.pledged/date.need | percent }}"></div>
+					<div class="progress-bar progress-bar-success user_progress" style="width: {{ date.user/date.need | percent }}"></div>
+				</div>
+			</td>
+			<td style="width:32%">
+				<div class="text-center">
+					<button class="pledge_toggle btn {{ !date.user || 'active btn-success' }}"><i class="glyphicon glyphicon-ok"></i></button>
+				</div>
+			</td>
+		</tr>
+	</table>
+</section>
+
+<section>
+	<fieldset class="text-center">
+		<p class="text-muted">You've pledged to contribute to {{total('user')}} needs.</p>
+		<div class="input-group col-lg-6 col-lg-push-3">
+			<input required type="email" placeholder="Email address" class="form-control" ng-modal="email">
+			<span class="input-group-btn">
+				<button type="submit" class="btn btn-success btn-large ">Signup <i class="icon-thumbs-up icon-white"></i></button>
+			</span>
+		</div>
+		<!-- http://docs.angularjs.org/api/ng.directive:input.email -->
+	</fieldset>
+	<br>
+	<div class="text-center">
+		<p>Once you sign up you&rsquo;ll receive an email with details of everything you signed up for. You&rsquo;ll also receive a reminder 2 days before the event.</p>
+	</div>
+</section>
